@@ -7,11 +7,11 @@ import { prisma } from "@/lib/prisma"
 export const greenButtonCss = "inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-lg hover:scale-105 transform"
 
 async function AdminPage() {
-  const user = await currentUser()
+  // const user = await currentUser()
 
-  if (!user) {
-    redirect("/sign-in")
-  }
+  // if (!user) {
+  //   redirect("/sign-in")
+  // }
 
   // Sincronizamos el usuario local
   await syncUser()
@@ -30,7 +30,8 @@ async function AdminPage() {
 
       {/* Bienvenida */}
       <h2 className="text-xl text-gray-900">
-        Bienvenid@ <span className="font-semibold">{user.firstName ?? user.email}</span>
+        Bienvenid@
+         {/* <span className="font-semibold">{user.firstName ?? user.email}</span> */}
       </h2>
 
       {/* Métricas */}

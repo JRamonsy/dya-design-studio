@@ -1,16 +1,22 @@
 import FormOffer from "@/components/FormOffer"
 import { currentUser } from "@clerk/nextjs/server"
+import Link from "next/link";
 import { redirect } from "next/navigation"
+import { IoMdArrowRoundBack } from "react-icons/io";
+import { redButtonCss } from "../page";
 
 async function NewOfferPage() {
-  const user = await currentUser()
+  // const user = await currentUser()
 
-  if (!user) {
-    redirect("/sign-in")
-  }
+  // if (!user) {
+  //   redirect("/sign-in")
+  // }
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-pink-50 to-blue-50 px-6 py-12">
+      <Link href="/admin/management">
+        <button className={redButtonCss}> <IoMdArrowRoundBack className="text-3xl" /> </button>
+      </Link>
       <div className="max-w-3xl mx-auto">
         <header className="mb-10 text-center">
           <h1 className="text-3xl font-bold text-slate-800">

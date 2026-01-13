@@ -2,8 +2,29 @@ import Link from "next/link"
 import { prisma } from "@/lib/prisma"
 import { greenButtonCss } from "../page"
 import DeleteButton from "@/components/DeleteButton"
+import { syncUser } from "@/lib/syncUser"
+import { redirect } from "next/navigation"
+import { currentUser } from "@clerk/nextjs/server"
+import { IoMdArrowRoundBack } from "react-icons/io";
+
+export const redButtonCss = "inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-8 rounded-full transition duration-300 shadow-lg hover:scale-105 transform"
 
 export default async function ManagementPage() {
+
+
+  const user = await currentUser()
+
+  if (!user) {
+    redirect("/sign-in")
+  }
+
+  // Sincronizamos el usuario local
+  await syncUser()
+
+
+
+
+
   const offers = await prisma.offer.findMany({
     orderBy: { createdAt: "desc" },
     include: { images: true },
@@ -13,7 +34,10 @@ export default async function ManagementPage() {
     <div className="p-8 space-y-6">
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold text-white">Gestión de ofertas</h1>
+        <Link href="/admin">
+          <button className={redButtonCss}> <IoMdArrowRoundBack className="text-3xl" /> </button>
+        </Link>
+        <h1 className="text-2xl font-bold">Gestión de ofertas</h1>
 
         <div className="flex items-center gap-4">
           {offers.length < 6 ? (
