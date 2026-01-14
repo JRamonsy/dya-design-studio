@@ -17,13 +17,14 @@ const publicRoutes = [
   '/',                          // Home
   '/sign-in(.*)',              // Login (tu página personalizada)
   '/api/upload(.*)',           // API de upload (si es pública)
+  '/api/offers(.*)',           // APIs de offers (si quieres protegerlas)
   // Agrega otras públicas si tienes
 ]
 
 // RUTAS PROTEGIDAS (requieren login)
 const protectedRoutes = [
   '/admin(.*)',                // TODAS las rutas bajo /admin
-  '/api/offers(.*)',           // APIs de offers (si quieres protegerlas)
+  
 ]
 
 const isPublicRoute = createRouteMatcher(publicRoutes)
