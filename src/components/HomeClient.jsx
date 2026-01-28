@@ -286,7 +286,7 @@ export default function HomeClient() {
 
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
               Descubre nuestras promociones especiales.
-              Toca una imagen para conocer los detalles ✨
+              Si hay imágenes toca una para conocer los detalles ✨
             </p>
           </div>
 
