@@ -5,6 +5,7 @@ import Cardsection from "@/components/Cardsection";
 import OfferSection from "@/components/OfferSection";
 import ServiceModal from "@/components/ServiceModal";
 import SocialLinks from "@/components/SocialLinks";
+import Link from "next/link";
 
 
 
@@ -370,7 +371,7 @@ export default function HomeClient() {
               <h3 className="text-2xl font-semibold text-center text-gray-800 mb-6">
                 Envíanos un mensaje
               </h3>
-              <form className="space-y-4">
+              {/* <form className="space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
                   <input 
                     type="text" 
@@ -394,7 +395,16 @@ export default function HomeClient() {
                 >
                   Enviar Mensaje
                 </button>
-              </form>
+              </form> */}
+
+              <div className="flex justify-center" >
+                <a
+                  href="mailto:dianaabigaildesignstudio@gmail.com"
+                  className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-full transition duration-300 text-center"
+                >
+                  Enviar Email
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -404,13 +414,16 @@ export default function HomeClient() {
       <footer className="bg-gray-800 text-white py-8 animate-on-scroll">
         <div className="container mx-auto px-6 text-center flex flex-col items-center">
           <div className="flex items-center justify-center space-x-4 mb-4">
-            <div className="w-10 h-10 bg-gradient-to-r from-pink-200 to-purple-200 rounded-full flex items-center justify-center hover:scale-110 transition duration-300">
-              <span className="text-gray-800 font-bold">D&A</span>
+            <div className="w-10 h-10 bg-gradient-to-r from-pink-200 to-purple-200 rounded-full flex items-center justify-center hover:scale-110 transition duration-300 ">
+              <img src="\imgs\logo-dya.png" alt="logo dya" />
             </div>
             <h3 className="text-xl font-bold">D&A Design Studio</h3>
           </div>
           <p className="text-gray-400">
-            © 2025 D&A Design Studio. Todos los derechos reservados. 
+            © 2026 D&A Design Studio.  
+            <Link href="/rights" className="cursor-pointer hover:text-slate-100 underline mx-2" >
+                Todos los derechos reservados. 
+            </Link>
           </p>
           <p className="text-gray-400">
             <a href="https://ramonsalas.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition duration-300">
