@@ -2,12 +2,17 @@
 
 import { FaFacebookF, FaInstagram } from "react-icons/fa"
 
+const handleClickAlert = () => {
+  alert("Proximamente!!!, mantenete al pendiente!!!")
+}
+
 export default function SocialLinks() {
   return (
     <section className="flex items-center justify-center gap-8">
       
       <a
-        href="https://www.facebook.com/"
+      onClick={handleClickAlert}
+        // href="https://www.facebook.com/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Facebook"
@@ -17,7 +22,8 @@ export default function SocialLinks() {
       </a>
 
       <a
-        href="https://www.instagram.com/"
+        onClick={handleClickAlert}
+        // href="https://www.instagram.com/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
