@@ -294,8 +294,11 @@ export default function HomeClient() {
 
         </main>
 
+        <section className="w-full flex justify-center" >
+          <Cardsection/>
+        </section>
 
-      <Cardsection/>
+
 
       <main className="relative px-6 py-20 md:px-12 bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 overflow-hidden">
 

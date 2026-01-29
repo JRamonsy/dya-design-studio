@@ -7,7 +7,7 @@ const Cardsection = () => {
 
     <section className="py-16 bg-gradient-to-br from-blue-50 to-teal-50 animate-on-scroll ">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto flex flex-col justify-center ">
+        <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-blue-800 mb-4">
               <span className="text-blue-500">Tarjetas Digitales</span> Modernas
