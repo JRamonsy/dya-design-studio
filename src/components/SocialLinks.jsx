@@ -16,7 +16,7 @@ export default function SocialLinks() {
       icon: <FaFacebookF className="text-6xl text-white" />,
       bgColor: "from-blue-500 to-blue-600",
       buttonColor: "bg-blue-500 hover:bg-blue-600",
-      additionalInfo: "Mantente al pendiente en esta LandingPage para promociones y descuentos."
+      additionalInfo: "Mantente al pendiente en esta LandingPage para promociones y descuentos.",
     },
     instagram: {
       title: "Instagram próximamente 📸",
@@ -49,25 +49,26 @@ export default function SocialLinks() {
     <section className="flex items-center justify-center gap-8">
       
       {/* Botón de Facebook */}
-      <button
-        onClick={() => handleOpenDialog('facebook')}
+      <a
+        // onClick={() => handleOpenDialog('facebook')}
+        href="https://www.facebook.com/share/1CF98gSSZP/"       
         aria-label="Facebook"
-        className="group flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-blue-100 to-blue-200 text-blue-600 shadow-lg transition-all duration-300 hover:from-blue-400 hover:to-blue-500 hover:text-white hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-blue-300"
+        className="group flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-blue-100 to-blue-200 text-blue-600 shadow-lg transition-all duration-300 hover:from-blue-400 hover:to-blue-500 hover:text-white hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-blue-300 cursor-pointer"
       >
         <div className="relative">
           <FaFacebookF className="text-6xl group-hover:scale-110 transition-transform duration-300" />
           {/* Badge de "próximamente" */}
-          <span className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+          {/* <span className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
             Pronto
-          </span>
+          </span> */}
         </div>
-      </button>
+      </a>
 
       {/* Botón de Instagram */}
       <button
         onClick={() => handleOpenDialog('instagram')}
         aria-label="Instagram"
-        className="group flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-pink-100 to-purple-100 text-pink-500 shadow-lg transition-all duration-300 hover:from-pink-400 hover:to-purple-500 hover:text-white hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-pink-300"
+        className="group flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-pink-100 to-purple-100 text-pink-500 shadow-lg transition-all duration-300 hover:from-pink-400 hover:to-purple-500 hover:text-white hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-pink-300 cursor-pointer"
       >
         <div className="relative">
           <FaInstagram className="text-6xl group-hover:scale-110 transition-transform duration-300" />
