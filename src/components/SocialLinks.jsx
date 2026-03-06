@@ -65,19 +65,20 @@ export default function SocialLinks() {
       </a>
 
       {/* Botón de Instagram */}
-      <button
-        onClick={() => handleOpenDialog('instagram')}
+      <a
+        // onClick={() => handleOpenDialog('instagram')}
+        href='https://www.instagram.com/dadesign.studio?utm_source=qr&igsh=cWd6c3ExeXNmOWlz'
         aria-label="Instagram"
         className="group flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-pink-100 to-purple-100 text-pink-500 shadow-lg transition-all duration-300 hover:from-pink-400 hover:to-purple-500 hover:text-white hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-pink-300 cursor-pointer"
       >
         <div className="relative">
           <FaInstagram className="text-6xl group-hover:scale-110 transition-transform duration-300" />
           {/* Badge de "próximamente" */}
-          <span className="absolute -top-2 -right-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+          {/*<span className="absolute -top-2 -right-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
             Pronto
-          </span>
+          </span> */}
         </div>
-      </button>
+      </a>
 
       {/* Diálogo para Facebook */}
       {activeDialog === 'facebook' && (
